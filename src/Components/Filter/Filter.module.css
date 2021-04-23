@@ -1,0 +1,16 @@
+.filterLabel {
+  margin-left: 20px;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+}
+.filterLabel input {
+  width: 280px;
+  margin-top: 10px;
+  outline: none;
+}
+.filterLabel input:focus {
+  border-color: blue;
+}
