@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './Form.module.css';
+
+import actions from '../../redux/action';
 
 export class Form extends Component {
   state = {
@@ -19,11 +22,11 @@ export class Form extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    if (this.props.onCheckUnique(this.state.name)) {
-      this.reset();
+    // if (this.props.onCheckUnique(this.state.name)) {
+    //   this.reset();
 
-      return;
-    }
+    //   return;
+    // }
     this.props.onSubmit(this.state);
 
     this.reset();
@@ -78,4 +81,8 @@ export class Form extends Component {
   }
 }
 
-export default Form;
+const mapDispathcToProps = dispatch => ({
+  onSubmit: contact => dispatch(actions.addContact(contact)),
+});
+
+export default connect(null, mapDispathcToProps)(Form);
