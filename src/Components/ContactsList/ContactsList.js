@@ -1,6 +1,7 @@
-import ContactsListItem from './ContactsListItem/ContactsListItem';
 import { connect } from 'react-redux';
-import actions from '../../redux/action';
+
+import ContactsListItem from './ContactsListItem/ContactsListItem';
+import actions from '../../redux/contacts/contactsAction';
 
 const ContactsList = ({ contacts, onRemove }) => {
   if (contacts.length === 0) return null;

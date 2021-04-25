@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './Form.module.css';
 
-import actions from '../../redux/action';
+import actions from '../../redux/contacts/contactsAction';
 
 export class Form extends Component {
   state = {
@@ -22,11 +22,11 @@ export class Form extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    // if (this.props.onCheckUnique(this.state.name)) {
-    //   this.reset();
+    if (this.props.onCheckUnique(this.state.name)) {
+      this.reset();
 
-    //   return;
-    // }
+      return;
+    }
     this.props.onSubmit(this.state);
 
     this.reset();
