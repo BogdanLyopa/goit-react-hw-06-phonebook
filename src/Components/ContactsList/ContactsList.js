@@ -7,7 +7,7 @@ const ContactsList = ({ contacts, onRemove }) => {
   if (contacts.length === 0) return null;
   return (
     <>
-      <h2>Contacts</h2>
+      <h2 className="title">Contacts</h2>
       <ul>
         {contacts.map(contact => (
           <ContactsListItem

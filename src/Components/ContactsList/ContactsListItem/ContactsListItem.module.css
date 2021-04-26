@@ -15,18 +15,21 @@
 }
 
 .item {
-  background-color: silver;
-  /* display: block; */
   align-items: center;
-  border: 1px solid rebeccapurple;
+  border-top: 1px solid rebeccapurple;
   padding: 5px;
-  width: 400px;
   display: flex;
   justify-content: space-between;
 }
 
 .item:hover {
-  background-color: rebeccapurple;
+  background-color: cornflowerblue;
   cursor: pointer;
   color: white;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #062d6b;
 }

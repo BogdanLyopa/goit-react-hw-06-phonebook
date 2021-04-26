@@ -1,9 +1,5 @@
 .form {
-  padding: 20px;
-  width: 300px;
-  background-color: silver;
-  border: 1px solid rebeccapurple;
-  border-radius: 7px;
+  /* padding: 30px; */
 }
 
 .button {
@@ -24,13 +20,18 @@
 }
 
 .label {
+  font-size: 20px;
+  color: #062d6b;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
 .label input {
-  padding: 4px;
+  padding: 6px;
+  width: 100%;
+  /* background-color: silver; */
 }
 
 .label input:focus {

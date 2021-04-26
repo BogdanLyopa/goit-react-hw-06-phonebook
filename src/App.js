@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h2>Phonebook</h2>
+        <h1 className="title">Phonebook</h1>
         <Form onCheckUnique={this.handleCheckUniqueContact} />
         {this.props.contacts.length > 0 && <Filter />}
         <ContactsList />
